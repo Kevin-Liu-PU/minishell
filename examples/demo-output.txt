@@ -1,0 +1,31 @@
+Quoted and empty arguments
+$ printf '<%s>\n' pre"two words"post ''
+<pretwo wordspost>
+<>
+status: 0
+
+Pipeline with file input
+$ cat <notes.txt | tr a-z A-Z
+PIPES
+QUOTES
+SIGNALS
+status: 0
+
+Output redirection
+$ printf saved >result.txt
+status: 0
+
+Read redirected output
+$ cat result.txt
+saved
+status: 0
+
+Last command determines status
+$ false | true
+status: 0
+
+Syntax failure before execution
+$ printf never >untouched |
+fsh: command is missing
+status: 2
+
