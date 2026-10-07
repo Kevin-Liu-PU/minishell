@@ -14,6 +14,10 @@ terminal to each foreground pipeline, forwards interrupts when run without a
 terminal, waits for its children, and restores terminal settings afterward. The
 whole command is parsed before execution, so invalid syntax cannot partially run.
 
+## Demo
+
+[Watch the terminal demo](media/demo.mp4).
+
 ## Build and try it
 
 On Linux or Ubuntu WSL, install a C++17 compiler, Make, and Python 3. The tests
@@ -40,7 +44,7 @@ BETA
 
 The [demo](examples/demo.py) creates and removes its own temporary fixture files.
 [Recorded output](examples/demo-output.txt) shows quoting, pipelines, redirection,
-exit status, and syntax rejection. A video will be added when it is available.
+exit status, and syntax rejection.
 
 CMake 3.16+ is also supported:
 
